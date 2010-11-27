@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<SyntaxDefinition name="Yoko" extensions=".sc">
+	
+	<Properties>
+		<Property name="LineComment" value="#;"/>
+	</Properties>
+	
+	<Digits name="Digits" bold="false" italic="false" color="Black"/>
+	
+	<RuleSets>
+		<RuleSet ignorecase="true">
+		
+			<Delimiters>~!@%^*()-+=|\#/{}[]:;"'&lt;&gt;,.?</Delimiters>
+			
+		    <Span name="LINECOMMENT" bold="false" italic="false" color="#008000" stopateol="true">
+				<Begin>#</Begin>
+			</Span>
+		    
+		    <Span name="LINECOMMENT" bold="false" italic="false" color="#008000" stopateol="true">
+				<Begin>;</Begin>
+			</Span>
+			
+			<Span name="STRING" bold="false" italic="false" color="#A31515" stopateol="true" escapecharacter='\'>
+				<Begin>"</Begin>
+				<End>"</End>
+			</Span>
+		    
+		    <Span name="STRING2" bold="false" italic="false" color="#A31515" stopateol="true" escapecharacter="\">
+				<Begin>'</Begin>
+				<End>'</End>
+			</Span>
+
+			<KeyWords name = "DataTypes" bold="false" italic="false" color="#6F002F">
+				<Key word = "Dim" />
+				<Key word = "Var" />
+			</KeyWords>
+			
+			<KeyWords name = "KeyWords" bold="false" italic="false" color="Blue">
+				<Key word = "And" />
+				<Key word = "Not" />
+				<Key word = "Or" />
+				<Key word = "To" />
+				<Key word = "Sub" />
+				<Key word = "EndSub" />
+				<Key word = "End" />
+				<Key word = "If" />
+				<Key word = "Then" />
+				<Key word = "Else" />
+				<Key word = "ElseIf" />
+				<Key word = "EndIf" />
+				<Key word = "For" />
+				<Key word = "To" />
+				<Key word = "Next" />
+				<Key word = "While" />
+				<Key word = "Until" />
+				<Key word = "Next" />
+				<Key word = "Wend" />
+				<Key word = "Repeat" />
+				<Key word = "Return" />
+			</KeyWords>
+			
+			<KeyWords name="Constants" bold="false" italic="false" color="#2B91AF">
+				<Key word="UO" />
+			</KeyWords>
+	    
+	        <KeyWords name="Constants" bold="false" italic="true" color="Black">
+				<Key word="Wait" />
+			</KeyWords>
+		</RuleSet>
+	</RuleSets>
+</SyntaxDefinition>

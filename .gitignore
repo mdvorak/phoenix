@@ -1,0 +1,11 @@
+*.ncb
+bin
+obj
+Debug
+Release
+x86
+*.user
+*.suo
+./help
+./out
+*.cache

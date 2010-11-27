@@ -1,0 +1,798 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="changeProfileButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="changeProfileButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>92, 22</value>
+  </data>
+  <data name="changeProfileButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 23</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="changeProfileButton.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="changeProfileButton.Text" xml:space="preserve">
+    <value>Change profile</value>
+  </data>
+  <data name="&gt;&gt;changeProfileButton.Name" xml:space="preserve">
+    <value>changeProfileButton</value>
+  </data>
+  <data name="&gt;&gt;changeProfileButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;changeProfileButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;changeProfileButton.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="saveButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="saveButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 22</value>
+  </data>
+  <data name="saveButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 23</value>
+  </data>
+  <data name="saveButton.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="saveButton.Text" xml:space="preserve">
+    <value>Save settings</value>
+  </data>
+  <metadata name="toolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>206, 17</value>
+  </metadata>
+  <data name="saveButton.ToolTip" xml:space="preserve">
+    <value>Saves current profile.</value>
+  </data>
+  <data name="&gt;&gt;saveButton.Name" xml:space="preserve">
+    <value>saveButton</value>
+  </data>
+  <data name="&gt;&gt;saveButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;saveButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;saveButton.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 186</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 13</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Console:</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 160</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 13</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Speech:</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="profileLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="profileLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt, style=Bold</value>
+  </data>
+  <data name="profileLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="profileLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>80, 3</value>
+  </data>
+  <data name="profileLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 13</value>
+  </data>
+  <data name="profileLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="profileLabel.Text" xml:space="preserve">
+    <value>Default</value>
+  </data>
+  <data name="&gt;&gt;profileLabel.Name" xml:space="preserve">
+    <value>profileLabel</value>
+  </data>
+  <data name="&gt;&gt;profileLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;profileLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;profileLabel.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 13</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Current profile:</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="disabledLimiterBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="disabledLimiterBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="disabledLimiterBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 229</value>
+  </data>
+  <data name="disabledLimiterBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 17</value>
+  </data>
+  <data name="disabledLimiterBox.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <data name="disabledLimiterBox.Text" xml:space="preserve">
+    <value>Disabled</value>
+  </data>
+  <data name="disabledLimiterBox.ToolTip" xml:space="preserve">
+    <value>FPS Limiter is disabled.</value>
+  </data>
+  <data name="&gt;&gt;disabledLimiterBox.Name" xml:space="preserve">
+    <value>disabledLimiterBox</value>
+  </data>
+  <data name="&gt;&gt;disabledLimiterBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;disabledLimiterBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;disabledLimiterBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="fps120Box.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="fps120Box.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="fps120Box.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 249</value>
+  </data>
+  <data name="fps120Box.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 17</value>
+  </data>
+  <data name="fps120Box.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="fps120Box.Text" xml:space="preserve">
+    <value>120 fps</value>
+  </data>
+  <data name="fps120Box.ToolTip" xml:space="preserve">
+    <value>120 Frames Per Second.</value>
+  </data>
+  <data name="&gt;&gt;fps120Box.Name" xml:space="preserve">
+    <value>fps120Box</value>
+  </data>
+  <data name="&gt;&gt;fps120Box.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fps120Box.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;fps120Box.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="fps500Box.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="fps500Box.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="fps500Box.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 229</value>
+  </data>
+  <data name="fps500Box.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 17</value>
+  </data>
+  <data name="fps500Box.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="fps500Box.Text" xml:space="preserve">
+    <value>500 fps</value>
+  </data>
+  <data name="fps500Box.ToolTip" xml:space="preserve">
+    <value>500 Frames Per Second.</value>
+  </data>
+  <data name="&gt;&gt;fps500Box.Name" xml:space="preserve">
+    <value>fps500Box</value>
+  </data>
+  <data name="&gt;&gt;fps500Box.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fps500Box.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;fps500Box.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="topMostCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="topMostCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="topMostCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 93</value>
+  </data>
+  <data name="topMostCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 17</value>
+  </data>
+  <data name="topMostCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="topMostCheckBox.Text" xml:space="preserve">
+    <value>TopMost</value>
+  </data>
+  <data name="topMostCheckBox.ToolTip" xml:space="preserve">
+    <value>When enabled window will be always above all other windows.</value>
+  </data>
+  <data name="&gt;&gt;topMostCheckBox.Name" xml:space="preserve">
+    <value>topMostCheckBox</value>
+  </data>
+  <data name="&gt;&gt;topMostCheckBox.Type" xml:space="preserve">
+    <value>Phoenix.Gui.Controls.SettingEntryCheckBox, Phoenix, Version=0.6.3351.38257, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;topMostCheckBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;topMostCheckBox.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="stayOnTopCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="stayOnTopCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="stayOnTopCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 70</value>
+  </data>
+  <data name="stayOnTopCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 17</value>
+  </data>
+  <data name="stayOnTopCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="stayOnTopCheckBox.Text" xml:space="preserve">
+    <value>Stay on top</value>
+  </data>
+  <data name="stayOnTopCheckBox.ToolTip" xml:space="preserve">
+    <value>When this enabled window will be always above client window.</value>
+  </data>
+  <data name="&gt;&gt;stayOnTopCheckBox.Name" xml:space="preserve">
+    <value>stayOnTopCheckBox</value>
+  </data>
+  <data name="&gt;&gt;stayOnTopCheckBox.Type" xml:space="preserve">
+    <value>Phoenix.Gui.Controls.SettingEntryCheckBox, Phoenix, Version=0.6.3351.38257, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;stayOnTopCheckBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;stayOnTopCheckBox.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="labelLine2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="labelLine2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelLine2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-1, 51</value>
+  </data>
+  <data name="labelLine2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="labelLine2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>307, 13</value>
+  </data>
+  <data name="labelLine2.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="labelLine2.Text" xml:space="preserve">
+    <value>Layout</value>
+  </data>
+  <data name="&gt;&gt;labelLine2.Name" xml:space="preserve">
+    <value>labelLine2</value>
+  </data>
+  <data name="&gt;&gt;labelLine2.Type" xml:space="preserve">
+    <value>Phoenix.Gui.Controls.LabelLine, PhoenixShared, Version=0.6.3347.30381, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;labelLine2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelLine2.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="labelLine1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="labelLine1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelLine1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-1, 138</value>
+  </data>
+  <data name="labelLine1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="labelLine1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>307, 13</value>
+  </data>
+  <data name="labelLine1.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="labelLine1.Text" xml:space="preserve">
+    <value>Colors</value>
+  </data>
+  <data name="&gt;&gt;labelLine1.Name" xml:space="preserve">
+    <value>labelLine1</value>
+  </data>
+  <data name="&gt;&gt;labelLine1.Type" xml:space="preserve">
+    <value>Phoenix.Gui.Controls.LabelLine, PhoenixShared, Version=0.6.3347.30381, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;labelLine1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelLine1.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="labelLine3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="labelLine3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelLine3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 210</value>
+  </data>
+  <data name="labelLine3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="labelLine3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>306, 13</value>
+  </data>
+  <data name="labelLine3.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="labelLine3.Text" xml:space="preserve">
+    <value>FPS Limiter</value>
+  </data>
+  <data name="&gt;&gt;labelLine3.Name" xml:space="preserve">
+    <value>labelLine3</value>
+  </data>
+  <data name="&gt;&gt;labelLine3.Type" xml:space="preserve">
+    <value>Phoenix.Gui.Controls.LabelLine, PhoenixShared, Version=0.6.3347.30381, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;labelLine3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelLine3.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>144, 231</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>159, 45</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>FPS Limiter could cause incorrect latency measurement.</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="minimizeToTray.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="minimizeToTray.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="minimizeToTray.Location" type="System.Drawing.Point, System.Drawing">
+    <value>133, 115</value>
+  </data>
+  <data name="minimizeToTray.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 17</value>
+  </data>
+  <data name="minimizeToTray.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="minimizeToTray.Text" xml:space="preserve">
+    <value>Minimize to tray</value>
+  </data>
+  <data name="&gt;&gt;minimizeToTray.Name" xml:space="preserve">
+    <value>minimizeToTray</value>
+  </data>
+  <data name="&gt;&gt;minimizeToTray.Type" xml:space="preserve">
+    <value>Phoenix.Gui.Controls.SettingEntryCheckBox, Phoenix, Version=0.6.3351.38257, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;minimizeToTray.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;minimizeToTray.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="showInTray.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="showInTray.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="showInTray.Location" type="System.Drawing.Point, System.Drawing">
+    <value>133, 93</value>
+  </data>
+  <data name="showInTray.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 17</value>
+  </data>
+  <data name="showInTray.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="showInTray.Text" xml:space="preserve">
+    <value>Show in tray</value>
+  </data>
+  <data name="&gt;&gt;showInTray.Name" xml:space="preserve">
+    <value>showInTray</value>
+  </data>
+  <data name="&gt;&gt;showInTray.Type" xml:space="preserve">
+    <value>Phoenix.Gui.Controls.SettingEntryCheckBox, Phoenix, Version=0.6.3351.38257, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;showInTray.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;showInTray.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="showInTaskbar.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="showInTaskbar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="showInTaskbar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>133, 70</value>
+  </data>
+  <data name="showInTaskbar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 17</value>
+  </data>
+  <data name="showInTaskbar.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="showInTaskbar.Text" xml:space="preserve">
+    <value>Show in taskbar</value>
+  </data>
+  <data name="&gt;&gt;showInTaskbar.Name" xml:space="preserve">
+    <value>showInTaskbar</value>
+  </data>
+  <data name="&gt;&gt;showInTaskbar.Type" xml:space="preserve">
+    <value>Phoenix.Gui.Controls.SettingEntryCheckBox, Phoenix, Version=0.6.3351.38257, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;showInTaskbar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;showInTaskbar.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="speechColorBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="speechColorBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>52, 157</value>
+  </data>
+  <data name="speechColorBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 21</value>
+  </data>
+  <data name="speechColorBox.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="&gt;&gt;speechColorBox.Name" xml:space="preserve">
+    <value>speechColorBox</value>
+  </data>
+  <data name="&gt;&gt;speechColorBox.Type" xml:space="preserve">
+    <value>Phoenix.Gui.Controls.ColorNumBox, Phoenix, Version=0.6.3351.38257, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;speechColorBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;speechColorBox.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="consoleColorBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="consoleColorBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>52, 183</value>
+  </data>
+  <data name="consoleColorBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 21</value>
+  </data>
+  <data name="consoleColorBox.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="&gt;&gt;consoleColorBox.Name" xml:space="preserve">
+    <value>consoleColorBox</value>
+  </data>
+  <data name="&gt;&gt;consoleColorBox.Type" xml:space="preserve">
+    <value>Phoenix.Gui.Controls.ColorNumBox, Phoenix, Version=0.6.3351.38257, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;consoleColorBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;consoleColorBox.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="overrideSpeechCheckBox.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="overrideSpeechCheckBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="overrideSpeechCheckBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>133, 159</value>
+  </data>
+  <data name="overrideSpeechCheckBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 17</value>
+  </data>
+  <data name="overrideSpeechCheckBox.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="overrideSpeechCheckBox.Text" xml:space="preserve">
+    <value>Override</value>
+  </data>
+  <data name="&gt;&gt;overrideSpeechCheckBox.Name" xml:space="preserve">
+    <value>overrideSpeechCheckBox</value>
+  </data>
+  <data name="&gt;&gt;overrideSpeechCheckBox.Type" xml:space="preserve">
+    <value>Phoenix.Gui.Controls.SettingEntryCheckBox, Phoenix, Version=0.6.3351.38257, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;overrideSpeechCheckBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;overrideSpeechCheckBox.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>306, 309</value>
+  </data>
+  <data name="&gt;&gt;toolTip.Name" xml:space="preserve">
+    <value>toolTip</value>
+  </data>
+  <data name="&gt;&gt;toolTip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>GeneralCategory</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

@@ -1,0 +1,23 @@
+LIBRARY	UOEncryption
+
+EXPORTS
+	Compress @1
+	Decompress @2
+	DecompressClean @3
+	
+	CalculateKeys @4
+	LoginCryptInit @5
+	LoginCryptEncrypt @6
+	
+	BlowfishInit @7
+	BlowfishEncrypt @8
+	BlowfishDecrypt @9
+	
+	TwofishInit @10
+	TwofishEncrypt @11
+	
+	MD5Init @12
+	MD5Encrypt @13
+	
+	PWEncrypt @14
+	PWDecrypt @15

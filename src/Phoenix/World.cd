@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="Phoenix.WorldData.ItemsCollection">
+    <Position X="22.75" Y="0.75" Width="3" />
+    <TypeIdentifier>
+      <FileName>WorldData\ItemsCollection.cs</FileName>
+      <HashCode>AAAAAAQAQAEAQBAAAAAAEAQAAAAAAAAFAAAAAABQAAA=</HashCode>
+    </TypeIdentifier>
+    <NestedTypes>
+      <Class Name="Phoenix.WorldData.ItemsCollection.Enumerator" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>WorldData\ItemsCollection.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+    </NestedTypes>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Phoenix.WorldData.LayersCollection">
+    <Position X="23" Y="5" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>WorldData\LayersCollection.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Phoenix.WorldData.RealCharacter">
+    <Position X="18.75" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>WorldData\RealCharacter.cs</FileName>
+      <HashCode>AAAAAgCAAAAgAAQAADAABAgQACAAAAQkEAAAJAAAACE=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Phoenix.WorldData.RealItem">
+    <Position X="21" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>WorldData\RealItem.cs</FileName>
+      <HashCode>AAAAAAQAAAAgAAIAAAAAAACAEAAAAAAEAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Phoenix.WorldData.RealObject">
+    <Position X="20" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>WorldData\RealObject.cs</FileName>
+      <HashCode>AAAQBABAAAAgAAAEAAAAAAQAABAEAAAAAAAAgAAAYAE=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Phoenix.WorldData.UOCharacter">
+    <Position X="11.75" Y="13.25" Width="2.5" />
+    <TypeIdentifier>
+      <FileName>WorldData\UOCharacter.cs</FileName>
+      <HashCode>AAEACgAAEAAAgAYAAHAABAgQAAACAAQsCAoAKAAEgAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Phoenix.WorldData.UOItem">
+    <Position X="15" Y="13.25" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>WorldData\UOItem.cs</FileName>
+      <HashCode>AAAYAAQAAIAQCAAAQAgAAECAEAAAAAAsAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Graphic" />
+      <Property Name="Layer" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Phoenix.WorldData.UOObject">
+    <Position X="13.25" Y="7.75" Width="2.75" />
+    <TypeIdentifier>
+      <FileName>WorldData\UOObject.cs</FileName>
+      <HashCode>AAAABAAAAAAgAgAEhAAIEAQAABAEAIBAAAAAgAEAYiE=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Color" />
+      <Property Name="Serial" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Phoenix.WorldData.UOPlayer">
+    <Position X="12" Y="19.75" Width="2" />
+    <TypeIdentifier>
+      <FileName>WorldData\UOPlayer.cs</FileName>
+      <HashCode>EAAAADCIAAAABAAAAAAAAAAAACAAAAQAEAAAAAAAACE=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Phoenix.WorldData.World">
+    <Position X="7.25" Y="14.25" Width="3.5" />
+    <TypeIdentifier>
+      <FileName>WorldData\World.cs</FileName>
+      <HashCode>wAMRCAQAQCAEIFjACAEIlQAICACACCgACQAGAWFAFUA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Player" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Characters" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Phoenix.WorldData.ObjectChangedEventWaiter">
+    <Position X="14.5" Y="0.75" Width="3" />
+    <TypeIdentifier>
+      <FileName>WorldData\ObjectChangedEventWaiter.cs</FileName>
+      <HashCode>AAAAAAAIACAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Phoenix.WorldData.ItemUpdateEventWaiter">
+    <Position X="12" Y="6" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>WorldData\SingleObjectChangedEventWaiters.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Phoenix.WorldData.ItemOpenedEventWaiter">
+    <Position X="15" Y="6" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>WorldData\SingleObjectChangedEventWaiters.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Phoenix.WorldData.ObjectRemovedEventWaiter">
+    <Position X="18" Y="6" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>WorldData\SingleObjectChangedEventWaiters.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Phoenix.WorldData.SpecializedObjectChangedEventWaiter">
+    <Position X="14.25" Y="3.25" Width="3.5" />
+    <TypeIdentifier>
+      <FileName>WorldData\SpecializedObjectChangedEventWaiter.cs</FileName>
+      <HashCode>AAAAAAAIAAAAAAgAAAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="Phoenix.UOColor">
+    <Position X="9.25" Y="8.5" Width="3" />
+    <TypeIdentifier>
+      <FileName>UOColor.cs</FileName>
+      <HashCode>EAAgBMOAAAAAFwAEoBACAAYAAgwAAKBAAAAAgAAAMiA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Method Name="IComparable.CompareTo" Hidden="true" />
+      <Method Name="IComparable&lt;ushort&gt;.CompareTo" Hidden="true" />
+      <Method Name="IConvertible.GetTypeCode" Hidden="true" />
+      <Method Name="IConvertible.ToBoolean" Hidden="true" />
+      <Method Name="IConvertible.ToByte" Hidden="true" />
+      <Method Name="IConvertible.ToDateTime" Hidden="true" />
+      <Method Name="IConvertible.ToDecimal" Hidden="true" />
+      <Method Name="IConvertible.ToDouble" Hidden="true" />
+      <Method Name="IConvertible.ToChar" Hidden="true" />
+      <Method Name="IConvertible.ToInt16" Hidden="true" />
+      <Method Name="IConvertible.ToInt32" Hidden="true" />
+      <Method Name="IConvertible.ToInt64" Hidden="true" />
+      <Method Name="IConvertible.ToSByte" Hidden="true" />
+      <Method Name="IConvertible.ToSingle" Hidden="true" />
+      <Method Name="IConvertible.ToString" Hidden="true" />
+      <Method Name="IConvertible.ToType" Hidden="true" />
+      <Method Name="IConvertible.ToUInt16" Hidden="true" />
+      <Method Name="IConvertible.ToUInt32" Hidden="true" />
+      <Method Name="IConvertible.ToUInt64" Hidden="true" />
+    </Members>
+    <Lollipop Position="0.2" />
+  </Struct>
+  <Struct Name="Phoenix.Graphic">
+    <Position X="18.75" Y="17.5" Width="2.75" />
+    <TypeIdentifier>
+      <FileName>Graphic.cs</FileName>
+      <HashCode>EAAgBMKAAAAAFwAEoBACAAYAAgwAAKBAAAAAgAAAMiA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Method Name="IComparable.CompareTo" Hidden="true" />
+      <Method Name="IComparable&lt;ushort&gt;.CompareTo" Hidden="true" />
+      <Method Name="IConvertible.GetTypeCode" Hidden="true" />
+      <Method Name="IConvertible.ToBoolean" Hidden="true" />
+      <Method Name="IConvertible.ToByte" Hidden="true" />
+      <Method Name="IConvertible.ToDateTime" Hidden="true" />
+      <Method Name="IConvertible.ToDecimal" Hidden="true" />
+      <Method Name="IConvertible.ToDouble" Hidden="true" />
+      <Method Name="IConvertible.ToChar" Hidden="true" />
+      <Method Name="IConvertible.ToInt16" Hidden="true" />
+      <Method Name="IConvertible.ToInt32" Hidden="true" />
+      <Method Name="IConvertible.ToInt64" Hidden="true" />
+      <Method Name="IConvertible.ToSByte" Hidden="true" />
+      <Method Name="IConvertible.ToSingle" Hidden="true" />
+      <Method Name="IConvertible.ToString" Hidden="true" />
+      <Method Name="IConvertible.ToType" Hidden="true" />
+      <Method Name="IConvertible.ToUInt16" Hidden="true" />
+      <Method Name="IConvertible.ToUInt32" Hidden="true" />
+      <Method Name="IConvertible.ToUInt64" Hidden="true" />
+    </Members>
+    <Lollipop Position="0.2" />
+  </Struct>
+  <Struct Name="Phoenix.Serial">
+    <Position X="8.25" Y="4.5" Width="2.75" />
+    <TypeIdentifier>
+      <FileName>Serial.cs</FileName>
+      <HashCode>EAAgBMKAEAAAFwAEqBgCAAIAAgwAAKBAAAAAAAAAMiA=</HashCode>
+    </TypeIdentifier>
+    <Members>
+      <Method Name="IComparable.CompareTo" Hidden="true" />
+      <Method Name="IComparable&lt;uint&gt;.CompareTo" Hidden="true" />
+      <Method Name="IConvertible.GetTypeCode" Hidden="true" />
+      <Method Name="IConvertible.ToBoolean" Hidden="true" />
+      <Method Name="IConvertible.ToByte" Hidden="true" />
+      <Method Name="IConvertible.ToDateTime" Hidden="true" />
+      <Method Name="IConvertible.ToDecimal" Hidden="true" />
+      <Method Name="IConvertible.ToDouble" Hidden="true" />
+      <Method Name="IConvertible.ToChar" Hidden="true" />
+      <Method Name="IConvertible.ToInt16" Hidden="true" />
+      <Method Name="IConvertible.ToInt32" Hidden="true" />
+      <Method Name="IConvertible.ToInt64" Hidden="true" />
+      <Method Name="IConvertible.ToSByte" Hidden="true" />
+      <Method Name="IConvertible.ToSingle" Hidden="true" />
+      <Method Name="IConvertible.ToString" Hidden="true" />
+      <Method Name="IConvertible.ToType" Hidden="true" />
+      <Method Name="IConvertible.ToUInt16" Hidden="true" />
+      <Method Name="IConvertible.ToUInt32" Hidden="true" />
+      <Method Name="IConvertible.ToUInt64" Hidden="true" />
+    </Members>
+    <Lollipop Position="0.2" />
+  </Struct>
+  <Enum Name="Phoenix.WorldData.Layer">
+    <Position X="15.5" Y="18.25" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>WorldData\Layer.cs</FileName>
+      <HashCode>AQAQAAERAiACBqiAABAFgACAoAIAAAAAEQAAQAGEAIA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+</ClassDiagram>

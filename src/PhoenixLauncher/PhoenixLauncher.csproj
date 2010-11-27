@@ -1,0 +1,242 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{105FD2BE-C1B0-4284-88C7-A0462D07C4F2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PhoenixLauncher</RootNamespace>
+    <AssemblyName>PhoenixLauncher</AssemblyName>
+    <ApplicationIcon>phoenix.ico</ApplicationIcon>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <NoStdLib>False</NoStdLib>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <BaseAddress>4194304</BaseAddress>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <FileAlignment>4096</FileAlignment>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <ApplicationRevision>37021</ApplicationRevision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>Full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\VersionInfo.cs">
+      <Link>Properties\VersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="Data\LaunchEvent.cs" />
+    <Compile Include="LaunchEvents.cs" />
+    <Compile Include="Controls\AccountBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\AccountBox.designer.cs">
+      <DependentUpon>AccountBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AccountDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\AccountDialog.designer.cs">
+      <DependentUpon>AccountDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AccountList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\AccountList.designer.cs">
+      <DependentUpon>AccountList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AddressBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\AddressBox.designer.cs">
+      <DependentUpon>AddressBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ClientExeBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ClientExeBox.designer.cs">
+      <DependentUpon>ClientExeBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FieldBoxBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\NameBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\NameBox.designer.cs">
+      <DependentUpon>NameBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PasswordBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PasswordBox.designer.cs">
+      <DependentUpon>PasswordBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ServerDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\ServerDialog.designer.cs">
+      <DependentUpon>ServerDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ServerEncryptionBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ServerEncryptionBox.designer.cs">
+      <DependentUpon>ServerEncryptionBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ServerList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ServerList.designer.cs">
+      <DependentUpon>ServerList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UltimaDirBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UltimaDirBox.designer.cs">
+      <DependentUpon>UltimaDirBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Account.cs" />
+    <Compile Include="Data\Constants.cs" />
+    <Compile Include="Data\Server.cs" />
+    <Compile Include="Controls\Details.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Details.Designer.cs">
+      <DependentUpon>Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HistoryCache.cs" />
+    <Compile Include="Launcher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Launcher.Designer.cs">
+      <DependentUpon>Launcher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Native.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\AccountBox.resx">
+      <DependentUpon>AccountBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\AccountDialog.resx">
+      <DependentUpon>AccountDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\AccountList.resx">
+      <DependentUpon>AccountList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\AddressBox.resx">
+      <DependentUpon>AddressBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ClientExeBox.resx">
+      <DependentUpon>ClientExeBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FieldBoxBase.resx">
+      <DependentUpon>FieldBoxBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\NameBox.resx">
+      <DependentUpon>NameBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PasswordBox.resx">
+      <DependentUpon>PasswordBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ServerDialog.resx">
+      <DependentUpon>ServerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ServerEncryptionBox.resx">
+      <DependentUpon>ServerEncryptionBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ServerList.resx">
+      <DependentUpon>ServerList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UltimaDirBox.resx">
+      <DependentUpon>UltimaDirBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Details.resx">
+      <DependentUpon>Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Launcher.resx">
+      <DependentUpon>Launcher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuickLaunchDialog.resx">
+      <DependentUpon>QuickLaunchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="QuickLaunchDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuickLaunchDialog.Designer.cs">
+      <DependentUpon>QuickLaunchDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Safe.cs" />
+    <Compile Include="UOKeys.cs" />
+    <None Include="Resources\dots.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="phoenix.ico" />
+    <ProjectReference Include="..\PhoenixShared\PhoenixShared.csproj">
+      <Project>{F837C027-63F1-4BCF-8359-242E1933B450}</Project>
+      <Name>PhoenixShared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Phoenix\Phoenix.csproj">
+      <Project>{2A5F65F5-646D-4DCE-A723-7F19F1F337D5}</Project>
+      <Name>Phoenix</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UOEncryption.NET\UOEncryption.NET.csproj">
+      <Project>{A9CA1AAA-3E01-456D-887F-BA75340D2C43}</Project>
+      <Name>UOEncryption.NET</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
+</Project>

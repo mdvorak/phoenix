@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="Phoenix.RuntimeAttribute">
+    <Position X="7" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Phoenix.BlockMultipleExecutionsAttribute">
+    <Position X="5.25" Y="9.25" Width="3.25" />
+    <TypeIdentifier>
+      <FileName>Attributes\BlockMultipleExecutionsAttribute.cs</FileName>
+      <HashCode>QAAAAEAAEAAAAAAAAAQAAABAAAAAAAABAAAAAAAAAEA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Phoenix.ClientMessageHandlerAttribute">
+    <Position X="9.25" Y="6.25" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>Attributes\ClientMessageHandlerAttribute.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Phoenix.CommandAttribute">
+    <Position X="2.25" Y="3.5" Width="2.5" />
+    <TypeIdentifier>
+      <FileName>Attributes\CommandAttribute.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAFAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Phoenix.ExecutableAttribute">
+    <Position X="5" Y="3.5" Width="2.5" />
+    <TypeIdentifier>
+      <FileName>Attributes\ExecutableAttribute.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAFAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Phoenix.ExecutionAttribute">
+    <Position X="2.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Attributes\ExecutionAttribute.cs</FileName>
+      <HashCode>AAAAAAAAEAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Phoenix.InfoGroupAttribute">
+    <Position X="7.25" Y="6.25" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>Attributes\InfoGroupAttribute.cs</FileName>
+      <HashCode>AAAAAAAAQAAAAEAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Phoenix.MessageHandlerAttributeBase">
+    <Position X="10.5" Y="3.5" Width="2.25" />
+    <TypeIdentifier>
+      <FileName>Attributes\MessageHandlerAttributeBase.cs</FileName>
+      <HashCode>AAACAAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Phoenix.PhoenixWindowTabPageAttribute">
+    <Position X="2.25" Y="6.25" Width="2.5" />
+    <TypeIdentifier>
+      <FileName>Attributes\PhoenixWindowTabPageAttribute.cs</FileName>
+      <HashCode>AAAAQAAAQAAAAEAgAAAAoAAAAAABABAAAQAAAAEAAEA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Phoenix.RuntimeObjectAttribute">
+    <Position X="8" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <FileName>Attributes\RuntimeObjectAttribute.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Phoenix.ServerMessageHandlerAttribute">
+    <Position X="11.75" Y="6.25" Width="2.5" />
+    <TypeIdentifier>
+      <FileName>Attributes\ServerMessageHandlerAttribute.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Phoenix.SettingsCategoryAttribute">
+    <Position X="5" Y="6.25" Width="2" />
+    <TypeIdentifier>
+      <FileName>Attributes\SettingsCategoryAttribute.cs</FileName>
+      <HashCode>AAAAAAAAQAAAAEAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+</ClassDiagram>

@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://nant.sf.net/release/0.86-beta1/nant.xsd"
+         name="Phoenix 0.6" default="build" basedir=".">
+
+  <!-- System Properties -->
+  <property name="debug" value="true" overwrite="false" />
+
+  <!-- User Properties -->
+  <property name="dir.sandcastle" value="C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder" />
+
+  <!-- Support properties -->
+  <property name="build.config" value="Debug" if="${debug}" />
+  <property name="build.config" value="Release" unless="${debug}" />
+
+  <property name="dir.solution" value="${directory::get-current-directory()}" />
+  <property name="dir.src" value="${dir.solution}\src" />
+  <property name="dir.output" value="${dir.solution}\out\bin" />
+  <property name="dir.help" value="${dir.solution}\out\help" />
+  <property name="dir.tmp" value="${dir.solution}\out\build" />
+  <property name="file.build" value="${project::get-buildfile-path()}" />
+
+  <property name="delete.tmp" value="true" />
+
+
+  <!-- Public targets -->
+
+  <target name="release" description="Builds all projects to their respective folders">
+    <nant buildfile="${file.build}" target="clean generate_tlb build help" inheritall="true">
+      <properties>
+        <property name="debug" value="false" />
+      </properties>
+    </nant>
+
+    <exec program="bzr" workingdir="${dir.solution}"
+          output="${dir.output}\changelog.txt">
+      <arg value="log" />
+    </exec>
+  </target>
+
+  <target name="build" depends="clean,compile" description="Builds all projects to their respective folders">
+    <!-- Remove pdb files for release build -->
+    <delete unless="${debug}">
+      <fileset basedir="${dir.tmp}">
+        <include name="*.pdb" />
+      </fileset>
+    </delete>
+
+    <copy todir="${dir.output}">
+      <fileset basedir="${dir.tmp}">
+        <include name="Boo.Lang*.dll" />
+        <include name="MagicLibrary.dll" />
+        <include name="XPTable.dll" />
+        <include name="ICSharpCode.TextEditor.dll" />
+
+        <include name="Phoenix.dll" />
+        <include name="Phoenix.pdb" />
+        <include name="Phoenix.dll.xml" />
+        <include name="Phoenix.dll.config" />
+        <include name="PhoenixShared.dll" />
+        <include name="PhoenixShared.pdb" />
+        <include name="PhoenixShared.dll.xml" />
+        <include name="MulLib.dll" />
+        <include name="MulLib.pdb" />
+        <include name="MulLib.dll.xml" />
+        <include name="Native.dll" />
+        <include name="UOEncryption.dll" />
+        <include name="UOEncryption.NET.dll" />
+
+        <include name="PhoenixLauncher.exe" />
+        <include name="PhoenixLauncher.exe.config" />
+        <include name="UOKeys.cfg" />
+        <include name="SharpEditor.exe" />
+        <include name="SharpEditor.exe.config" />
+        <include name="*.xshd" />
+      </fileset>
+    </copy>
+    <copy todir="${dir.output}/cs-CZ">
+      <fileset basedir="${dir.tmp}/cs-CZ">
+        <include name="*.dll" />
+      </fileset>
+    </copy>
+
+    <!-- Plugins -->
+    <mkdir dir="${dir.output}\Plugins" />
+
+    <copy todir="${dir.output}\Plugins">
+      <fileset basedir="${dir.tmp}">
+        <include name="Phoenix.SkillsTab.dll" />
+        <include name="Phoenix.Speech.dll" />
+        <include name="Phoenix.Speech.dll.xml" />
+        <include name="Phoenix.Mp3.dll" />
+        <include name="Phoenix.Mp3.dll.xml" />
+      </fileset>
+    </copy>
+
+    <!-- Rest -->
+    <mkdir dir="${dir.output}\Profiles" />
+    <mkdir dir="${dir.output}\Scripts" />
+    <copy file="${dir.solution}\UOKeys.cfg" todir="${dir.output}" />
+
+    <!-- Delete tmp directory -->
+    <delete dir="${dir.tmp}" if="${delete.tmp}" includeemptydirs="true" failonerror="false" />
+  </target>
+
+  <target name="clean" description="Deletes current output directory">
+    <delete failonerror="false">
+      <fileset basedir="${dir.output}">
+        <include name="**\*"/>
+      </fileset>
+    </delete>
+    <delete failonerror="false">
+      <fileset basedir="${dir.help}">
+        <include name="**\*"/>
+      </fileset>
+    </delete>
+    <delete dir="${dir.tmp}" failonerror="false" />
+    <mkdir dir="${dir.output}" />
+  </target>
+
+
+  <target name="clean-all" description="Deletes output directory and all intermediate build files">
+    <delete failonerror="false">
+      <fileset basedir="${dir.solution}\out">
+        <include name="**\*" />
+      </fileset>
+    </delete>
+    <mkdir dir="${dir.solution}\out" failonerror="false" />
+
+    <delete failonerror="false">
+      <fileset>
+        <include name="${dir.src}\**\bin\**\*" />
+        <include name="${dir.src}\**\obj\**\*" />
+      </fileset>
+    </delete>
+  </target>
+
+  <target name="tlb" depends="clean,generate_tlb" description="Generates Phoenix.tlb from .NET assembly">
+    <!-- Delete tmp directory -->
+    <delete dir="${dir.tmp}" if="${delete.tmp}" includeemptydirs="true" failonerror="false" />
+  </target>
+
+  <target name="help" depends="clean,build" description="Builds web help">
+    <fail message="Use -D:debug=false" if="${debug}" />
+
+    <msbuild project="${dir.solution}\Phoenix.shfbproj" target="Rebuild">
+      <property name="Configuration" value="Release" />
+      <property name="Platform" value="x86" />
+      <property name="OutputPath" value="${dir.help}" />
+      <property name="SHFBROOT" value="${dir.sandcastle}" />
+    </msbuild>
+  </target>
+
+  <!-- Private targets -->
+
+  <target name="compile" depends="compile_net,compile_native,compile_editor">
+  </target>
+  
+  <target name="compile_net" depends="prepare_libs">
+    <msbuild project="${dir.solution}\PhoenixCS.sln" target="Rebuild">
+      <property name="Configuration" value="${build.config}" />
+      <property name="Platform" value="x86" />
+      <property name="OutputPath" value="${dir.tmp}" />
+    </msbuild>
+  </target>
+
+  <target name="compile_native" depends="prepare_libs">
+    <property name="file.vcprops" value="${dir.tmp}\vc.vsprops" />
+    <echo file="${file.vcprops}" message="&lt;?xml version=&quot;1.0&quot;?&gt;" append="false" />
+    <echo file="${file.vcprops}" message="&lt;VisualStudioPropertySheet ProjectType=&quot;Visual C++&quot; Version=&quot;8.00&quot; Name=&quot;nant&quot;" append="true" />
+    <echo file="${file.vcprops}" message=" OutputDirectory=&quot;${dir.tmp}&quot;&gt; &lt;/VisualStudioPropertySheet&gt;" append="true" />
+
+    <msbuild project="${dir.solution}\PhoenixC.sln" target="Rebuild">
+      <property name="Configuration" value="${build.config}" />
+      <property name="Platform" value="x86" />
+      <property name="OutputPath" value="${dir.tmp}" />
+      <property name="VCBuildOverride" value="${file.vcprops}" />
+    </msbuild>
+  </target>
+
+  <target name="compile_editor" depends="prepare_libs">
+    <msbuild project="${dir.solution}\SharpEditor.sln" target="Rebuild">
+      <property name="Configuration" value="${build.config}" />
+      <property name="Platform" value="x86" />
+      <property name="OutputPath" value="${dir.tmp}" />
+      <property name="BooBinPath" value="${dir.solution}\lib" />
+    </msbuild>
+  </target>
+
+  <target name="prepare_libs">
+    <!-- Copy libraries to tmp dir -->
+    <copy todir="${dir.tmp}">
+      <fileset basedir="${dir.solution}\lib">
+        <include name="*" />
+      </fileset>
+    </copy>
+  </target>
+
+  <target name="generate_tlb" depends="compile_net" description="Generates Phoenix.tlb from .NET assembly">
+    <exec program="${dir.tmp}\tlbexp.exe" workingdir="${dir.tmp}">
+      <arg value="Phoenix.dll" />
+    </exec>
+
+    <copy file="${dir.tmp}\Phoenix.tlb" tofile="${dir.solution}\Phoenix.tlb" overwrite="true" />
+  </target>
+</project>

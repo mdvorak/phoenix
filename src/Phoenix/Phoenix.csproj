@@ -1,0 +1,727 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2A5F65F5-646D-4DCE-A723-7F19F1F337D5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Phoenix</RootNamespace>
+    <AssemblyName>Phoenix</AssemblyName>
+    <ApplicationIcon>phoenix.ico</ApplicationIcon>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <NoStdLib>False</NoStdLib>
+    <BaseAddress>4194304</BaseAddress>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <FileAlignment>4096</FileAlignment>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <SignAssembly>false</SignAssembly>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkSubset>
+    </TargetFrameworkSubset>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <DebugType>Full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <GenerateSerializationAssemblies>On</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <DebugType>PdbOnly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <DocumentationFile>bin\Release\Phoenix.dll.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Boo.Lang, Version=2.0.9.3, Culture=neutral, PublicKeyToken=32c39770e9a21a67, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Boo.Lang.dll</HintPath>
+    </Reference>
+    <Reference Include="Boo.Lang.CodeDom, Version=2.0.9.3, Culture=neutral, PublicKeyToken=32c39770e9a21a67, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Boo.Lang.CodeDom.dll</HintPath>
+    </Reference>
+    <Reference Include="Boo.Lang.Compiler, Version=2.0.9.3, Culture=neutral, PublicKeyToken=32c39770e9a21a67, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Boo.Lang.Compiler.dll</HintPath>
+    </Reference>
+    <Reference Include="Boo.Lang.Extensions, Version=2.0.9.3, Culture=neutral, PublicKeyToken=32c39770e9a21a67, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Boo.Lang.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Boo.Lang.Parser, Version=2.0.9.3, Culture=neutral, PublicKeyToken=32c39770e9a21a67, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\Boo.Lang.Parser.dll</HintPath>
+    </Reference>
+    <Reference Include="MagicLibrary, Version=1.7.4.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\MagicLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="XPTable, Version=1.0.2.0, Culture=neutral, PublicKeyToken=24950705800d2198, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\XPTable.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\VersionInfo.cs">
+      <Link>Properties\VersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="AliasChangedEventArgs.cs" />
+    <Compile Include="Aliases.cs" />
+    <Compile Include="Attributes\AutoStartAttribute.cs" />
+    <Compile Include="Attributes\BlockMultipleExecutionsAttribute.cs" />
+    <Compile Include="Attributes\ClientMessageHandlerAttribute.cs" />
+    <Compile Include="Attributes\CommandAttribute.cs" />
+    <Compile Include="Attributes\ExecutableAttribute.cs" />
+    <Compile Include="Attributes\ExecutionAttribute.cs" />
+    <Compile Include="Attributes\InfoGroupAttribute.cs" />
+    <Compile Include="Attributes\MessageHandlerAttributeBase.cs" />
+    <Compile Include="Attributes\OptionalParameterAttribute.cs" />
+    <Compile Include="Attributes\PhoenixWindowTabPageAttribute.cs" />
+    <Compile Include="Attributes\RuntimeObjectAttribute.cs" />
+    <Compile Include="Attributes\ServerMessageHandlerAttribute.cs" />
+    <Compile Include="Attributes\SettingsCategoryAttribute.cs" />
+    <Compile Include="Client.cs" />
+    <Compile Include="CollectionEvents.cs" />
+    <Compile Include="Communication\Packets\TargetData.cs" />
+    <Compile Include="Configuration\SettingEntry.cs" />
+    <Compile Include="Configuration\SettingsFragment.cs" />
+    <Compile Include="Gui\AboutDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\AboutDialog.Designer.cs">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\AppCommand.cs" />
+    <Compile Include="Gui\ClientWindow.cs" />
+    <Compile Include="Gui\Controls\CommandBuilderDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Controls\CommandBuilderDialog.Designer.cs">
+      <DependentUpon>CommandBuilderDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Controls\ReportControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\Controls\ReportControl.Designer.cs">
+      <DependentUpon>ReportControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Editor\AddFileDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Editor\AddFileDialog.Designer.cs">
+      <DependentUpon>AddFileDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Editor\BooScriptTemplate.cs" />
+    <Compile Include="Gui\Editor\CSClassTemplate.cs" />
+    <Compile Include="Gui\Editor\EmptyFileTemplate.cs" />
+    <Compile Include="Gui\Editor\FileList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\Editor\FileList.Designer.cs">
+      <DependentUpon>FileList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Editor\FileSystemObject.cs" />
+    <Compile Include="Gui\Editor\IItemTemplate.cs" />
+    <Compile Include="Gui\Editor\TemplateIcons.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TemplateIcons.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Editor\VBClassTemplate.cs" />
+    <Compile Include="IClientTarget.cs" />
+    <Compile Include="IRequestResult.cs" />
+    <Compile Include="Macros\MacroCommandType.cs" />
+    <Compile Include="Macros\MacroPlayer.cs" />
+    <Compile Include="Macros\SpeechMacroCommand.cs" />
+    <Compile Include="Macros\WaitMenuMacroCommand.cs" />
+    <Compile Include="Runtime\CommandList.cs" />
+    <Compile Include="Gui\Pages\InfoGroups\CommunicationInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\Pages\InfoGroups\CommunicationInfo.Designer.cs">
+      <DependentUpon>CommunicationInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Pages\InfoGroups\PhoenixInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\Pages\InfoGroups\PhoenixInfo.Designer.cs">
+      <DependentUpon>PhoenixInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Pages\InfoGroups\PlayerInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\Pages\InfoGroups\PlayerInfo.Designer.cs">
+      <DependentUpon>PlayerInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Pages\InfoGroups\ServerInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\Pages\InfoGroups\ServerInfo.Designer.cs">
+      <DependentUpon>ServerInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Pages\InfoGroups\WorldInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\Pages\InfoGroups\WorldInfo.Designer.cs">
+      <DependentUpon>WorldInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Pages\InfoPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\Pages\InfoPage.Designer.cs">
+      <DependentUpon>InfoPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Pages\MacrosPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\Pages\MacrosPage.Designer.cs">
+      <DependentUpon>MacrosPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\ReportViewerDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\ReportViewerDialog.Designer.cs">
+      <DependentUpon>ReportViewerDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JournalEventWaiter.cs" />
+    <Compile Include="Macros\CastMacroCommand.cs" />
+    <Compile Include="Macros\ChangePauseDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Macros\ChangePauseDialog.Designer.cs">
+      <DependentUpon>ChangePauseDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Macros\MacroRecorderDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Macros\MacroRecorderDialog.Designer.cs">
+      <DependentUpon>MacroRecorderDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Macros\IMacroCommand.cs" />
+    <Compile Include="Macros\Macro.cs" />
+    <Compile Include="Macros\MacroCommandList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Macros\MacroCommandList.Designer.cs">
+      <DependentUpon>MacroCommandList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Macros\MacrosCollection.cs" />
+    <Compile Include="Macros\ObjectCommandBase.cs" />
+    <Compile Include="Macros\MacroRecorder.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Macros\OpenDoorMacroCommand.cs" />
+    <Compile Include="Macros\PacketTranslator.cs" />
+    <Compile Include="Macros\UseObjectCommand.cs" />
+    <Compile Include="Macros\UseSkillMacroCommand.cs" />
+    <Compile Include="Macros\WaitMacroCommand.cs" />
+    <Compile Include="Macros\WaitTargetCommand.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="PublicEvent.cs" />
+    <Compile Include="RelativeTarget.cs" />
+    <Compile Include="Runtime\AssemblyDisposer.cs" />
+    <Compile Include="Runtime\Reflection\SyntaxBuilder.cs" />
+    <Compile Include="Runtime\ReportViewer.cs" />
+    <Compile Include="Runtime\RuntimeObjectsLoader.cs" />
+    <Compile Include="Runtime\RuntimeObjectsLoaderReport.cs" />
+    <Compile Include="Runtime\UnregisteringAssemblyEvent.cs" />
+    <Compile Include="UOColor.cs" />
+    <Compile Include="Communication\ActionSpamLimiter.cs" />
+    <Compile Include="Communication\LatencyMeasurement.cs" />
+    <Compile Include="Communication\PacketFilter.cs" />
+    <Compile Include="Communication\Packets\AsciiSpeech.cs" />
+    <Compile Include="Communication\Packets\AsciiSpeechRequest.cs" />
+    <Compile Include="Communication\Packets\Menu.cs" />
+    <Compile Include="Communication\Packets\PacketBase.cs" />
+    <Compile Include="Communication\Packets\SpeechBase.cs" />
+    <Compile Include="Communication\Packets\UnicodeSpeech.cs" />
+    <Compile Include="Communication\Packets\UnicodeSpeechRequest.cs" />
+    <Compile Include="Communication\Packets\VariablePacket.cs" />
+    <Compile Include="Communication\SocketException.cs" />
+    <Compile Include="Configuration\SpellList.cs" />
+    <Compile Include="DataFiles.cs" />
+    <Compile Include="EventWaiter.cs" />
+    <Compile Include="Gui\Controls\ArtImageControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Gui\Controls\ColorNumBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\Controls\ColorNumBox.Designer.cs">
+      <DependentUpon>ColorNumBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Controls\CommandLineBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Gui\Controls\CommandLineBox.Designer.cs">
+      <DependentUpon>CommandLineBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Controls\HuesField.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Gui\Controls\HueSpectrum.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Gui\Controls\HuesRenderer.cs" />
+    <Compile Include="Gui\Controls\UOSelectColorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Controls\UOSelectColorDialog.Designer.cs">
+      <DependentUpon>UOSelectColorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Helper.cs" />
+    <Compile Include="Gui\NotepadDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\NotepadDialog.Designer.cs">
+      <DependentUpon>NotepadDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Pages\AddHotkeyDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Pages\AddHotkeyDialog.Designer.cs">
+      <DependentUpon>AddHotkeyDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Pages\HotkeysPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\Pages\HotkeysPage.Designer.cs">
+      <DependentUpon>HotkeysPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Pages\InfoCustomizeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Pages\InfoCustomizeDialog.Designer.cs">
+      <DependentUpon>InfoCustomizeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Pages\RuntimePage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\Pages\RuntimePage.Designer.cs">
+      <DependentUpon>RuntimePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Pages\ScriptsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\Pages\ScriptsPage.Designer.cs">
+      <DependentUpon>ScriptsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Pages\SettingCategories\Log.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\Pages\SettingCategories\Log.Designer.cs">
+      <DependentUpon>Log.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Pages\SettingsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\Pages\SettingsPage.Designer.cs">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\PhoenixGuiThread.cs" />
+    <Compile Include="Gui\PhoenixTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Gui\Pages\_Log\LogCategoriesControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\Pages\_Log\LogCategoriesControl.Designer.cs">
+      <DependentUpon>LogCategoriesControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Pages\_Log\LogCategoryInfo.cs" />
+    <Compile Include="Gui\Pages\_Log\LogFilter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Pages\_Log\LogFilter.Designer.cs">
+      <DependentUpon>LogFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Pages\_Log\LogBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Gui\Pages\_Log\LogPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\Pages\_Log\LogPage.Designer.cs">
+      <DependentUpon>LogPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Pages\_Log\LogBoxWriterTraceListener.cs" />
+    <Compile Include="Gui\Controls\NumTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Gui\PhoenixWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\PhoenixWindow.Designer.cs">
+      <DependentUpon>PhoenixWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Controls\KeyBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Gui\SelectProfileDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\SelectProfileDialog.Designer.cs">
+      <DependentUpon>SelectProfileDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Controls\CategoryData.cs" />
+    <Compile Include="Gui\Controls\CategoryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\Controls\CategoryControl.Designer.cs">
+      <DependentUpon>CategoryControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Pages\SettingCategories\GeneralCategory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\Pages\SettingCategories\GeneralCategory.Designer.cs">
+      <DependentUpon>GeneralCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Controls\SettingEntryCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Gui\WindowTaskbarConfig.cs" />
+    <Compile Include="InternalErrorException.cs" />
+    <Compile Include="Notepad.cs" />
+    <Compile Include="Runtime\ClientMessageHandler.cs" />
+    <Compile Include="Runtime\ExecutionBlockedException.cs" />
+    <Compile Include="Runtime\Helper.cs" />
+    <Compile Include="Runtime\Hotkeys.cs" />
+    <Compile Include="Runtime\TextCommand.cs" />
+    <Compile Include="JournalEntryAddedEventArgs.cs" />
+    <Compile Include="MenuSelection.cs" />
+    <Compile Include="Runtime\ExecutionInfo.cs" />
+    <Compile Include="Runtime\Executions.cs" />
+    <Compile Include="Runtime\IAssemblyObject.cs" />
+    <Compile Include="Runtime\Reflection\Command.cs" />
+    <Compile Include="Runtime\Reflection\Executable.cs" />
+    <Compile Include="Runtime\Reflection\ParameterException.cs" />
+    <Compile Include="Runtime\Reflection\TypeHelper.cs" />
+    <Compile Include="Runtime\Reflection\InputParameter.cs" />
+    <Compile Include="Runtime\Reflection\Method.cs" />
+    <Compile Include="Runtime\Reflection\MethodCollection.cs" />
+    <Compile Include="Runtime\Reflection\MethodOverloads.cs" />
+    <Compile Include="Runtime\Reflection\ParameterData.cs" />
+    <Compile Include="Runtime\Reflection\TypeClass.cs" />
+    <Compile Include="Runtime\RuntimeCore.cs" />
+    <Compile Include="Runtime\RuntimeException.cs" />
+    <Compile Include="Runtime\SyntaxDB.cs" />
+    <Compile Include="ScriptErrorException.cs" />
+    <Compile Include="Serial.cs" />
+    <Compile Include="StaticTarget.cs" />
+    <Compile Include="Graphic.cs" />
+    <Compile Include="UIManager.cs" />
+    <Compile Include="Journal.cs" />
+    <Compile Include="Gui\Pages\_Journal\JournalPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\Pages\_Journal\JournalPage.Designer.cs">
+      <DependentUpon>JournalPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JournalEntry.cs" />
+    <Compile Include="Logging\JournalFileWriter.cs" />
+    <Compile Include="Logging\JournalHandler.cs" />
+    <Compile Include="Gui\Pages\_Journal\MaxJournalLenghtDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Pages\_Journal\MaxJournalLenghtDialog.Designer.cs">
+      <DependentUpon>MaxJournalLenghtDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageCallbacksCollection.cs" />
+    <Compile Include="Communication\GenericSendLimiter.cs" />
+    <Compile Include="SpeechColorOverride.cs" />
+    <Compile Include="ProfileConfig.cs" />
+    <Compile Include="Configuration\SettingsLoader.cs" />
+    <Compile Include="SizeConverter.cs" />
+    <Compile Include="UO.cs" />
+    <Compile Include="UO.Journal.cs">
+      <DependentUpon>UO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UO.Resync.cs">
+      <DependentUpon>UO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UO.Speech.cs">
+      <DependentUpon>UO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UO.UIManager.cs">
+      <DependentUpon>UO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UO.Actions.cs">
+      <DependentUpon>UO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UO.World.cs">
+      <DependentUpon>UO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComInterop\ComObject.cs" />
+    <Compile Include="ComInterop\IWinSock.cs" />
+    <Compile Include="Env.cs" />
+    <Compile Include="LoginInfo.cs" />
+    <Compile Include="Communication\BandwidthManager.cs" />
+    <Compile Include="Communication\PacketLogging.cs" />
+    <Compile Include="Configuration\ClientList.cs" />
+    <Compile Include="Communication\CommunicationManager.cs" />
+    <Compile Include="Communication\GameSocket.cs" />
+    <Compile Include="Communication\WinSock.cs" />
+    <Compile Include="Core.cs" />
+    <Compile Include="Configuration\LaunchData.cs" />
+    <Compile Include="Communication\LoginSocket.cs" />
+    <Compile Include="Communication\PacketBuilder.cs" />
+    <Compile Include="Communication\PacketLenghts.cs" />
+    <Compile Include="Communication\PacketReader.cs" />
+    <Compile Include="Communication\PacketWriter.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="ClientKeys.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Communication\UltimaSocket.cs" />
+    <Compile Include="Speech.cs" />
+    <Compile Include="WorldData\CharacterAppearedEvent.cs" />
+    <Compile Include="WorldData\CharacterCollection.cs" />
+    <Compile Include="WorldData\PlayerSkills.cs" />
+    <Compile Include="WorldData\SingleObjectChangedEventWaiters.cs" />
+    <Compile Include="WorldData\StandardSkill.cs" />
+    <Compile Include="WorldData\SpecializedObjectChangedEventWaiter.cs" />
+    <Compile Include="WorldData\ItemsCollection.cs" />
+    <Compile Include="WorldData\ObjectChangedEventWaiter.cs" />
+    <Compile Include="WorldData\Layer.cs" />
+    <Compile Include="WorldData\LayersCollection.cs" />
+    <Compile Include="WorldData\Notoriety.cs" />
+    <Compile Include="WorldData\ObjectCallbacksCollection.cs" />
+    <Compile Include="WorldData\ObjectChangedEvent.cs" />
+    <Compile Include="WorldData\RealCharacter.cs" />
+    <Compile Include="WorldData\RealItem.cs" />
+    <Compile Include="WorldData\RealObject.cs" />
+    <Compile Include="WorldData\StandardSpell.cs" />
+    <Compile Include="WorldData\UOCharacter.cs" />
+    <Compile Include="WorldData\UOItem.cs" />
+    <Compile Include="WorldData\UOObject.cs" />
+    <Compile Include="WorldData\UOPlayer.cs" />
+    <Compile Include="WorldData\WalkHandling.cs" />
+    <Compile Include="WorldData\WarmodeChange.cs" />
+    <Compile Include="WorldData\World.cs" />
+    <Compile Include="WorldData\WorldLocation.cs" />
+    <Compile Include="WorldData\WorldPacketHandler.cs" />
+    <EmbeddedResource Include="Gui\AboutDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Controls\CommandBuilderDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CommandBuilderDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Controls\HuesField.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>HuesField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Controls\ReportControl.resx">
+      <DependentUpon>ReportControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Controls\ColorNumBox.resx">
+      <DependentUpon>ColorNumBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Controls\CommandLineBox.resx">
+      <DependentUpon>CommandLineBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Controls\UOSelectColorDialog.resx">
+      <DependentUpon>UOSelectColorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Editor\AddFileDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AddFileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Editor\FileList.resx">
+      <DependentUpon>FileList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Editor\TemplateIcons.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TemplateIcons.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\NotepadDialog.resx">
+      <DependentUpon>NotepadDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Pages\AddHotkeyDialog.resx">
+      <DependentUpon>AddHotkeyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Pages\HotkeysPage.resx">
+      <DependentUpon>HotkeysPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Pages\InfoCustomizeDialog.resx">
+      <DependentUpon>InfoCustomizeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Pages\InfoGroups\CommunicationInfo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CommunicationInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Pages\InfoGroups\PhoenixInfo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PhoenixInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Pages\InfoGroups\PlayerInfo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PlayerInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Pages\InfoGroups\ServerInfo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ServerInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Pages\InfoGroups\WorldInfo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WorldInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Pages\InfoPage.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InfoPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Pages\MacrosPage.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MacrosPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Pages\RuntimePage.resx">
+      <DependentUpon>RuntimePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Pages\ScriptsPage.resx">
+      <DependentUpon>ScriptsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Pages\SettingCategories\Log.cs-CZ.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Log.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Pages\SettingCategories\Log.resx">
+      <DependentUpon>Log.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Pages\SettingsPage.resx">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Pages\_Log\LogCategoriesControl.resx">
+      <DependentUpon>LogCategoriesControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Pages\_Log\LogFilter.resx">
+      <DependentUpon>LogFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Pages\_Log\LogPage.resx">
+      <DependentUpon>LogPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\PhoenixWindow.resx">
+      <DependentUpon>PhoenixWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\ReportViewerDialog.resx">
+      <DependentUpon>ReportViewerDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\SelectProfileDialog.resx">
+      <DependentUpon>SelectProfileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Controls\CategoryControl.resx">
+      <DependentUpon>CategoryControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Pages\SettingCategories\GeneralCategory.resx">
+      <DependentUpon>GeneralCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Pages\_Journal\JournalPage.resx">
+      <DependentUpon>JournalPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Pages\_Journal\MaxJournalLenghtDialog.resx">
+      <DependentUpon>MaxJournalLenghtDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Macros\ChangePauseDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ChangePauseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Macros\MacroCommandList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MacroCommandList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Macros\MacroRecorderDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MacroRecorderDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Attributes.cd" />
+    <None Include="World.cd" />
+    <None Include="Resources\Icon_10.ico" />
+    <None Include="Resources\journal.ico" />
+    <None Include="Resources\log.ico" />
+    <None Include="Resources\settings.ico" />
+    <None Include="Resources\Icon_138.ico" />
+    <None Include="Phoenix.dll.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\HotkeysIcon.ico" />
+    <None Include="Resources\cs.ico" />
+    <None Include="Resources\FolderClosed.ico" />
+    <None Include="Resources\FolderOpened.ico" />
+    <None Include="Resources\jsl.ico" />
+    <None Include="Resources\Icon_158.ico" />
+    <None Include="Resources\JSharp.ico" />
+    <None Include="Resources\CSClass.ico" />
+    <None Include="Resources\CSFile.ico" />
+    <None Include="Resources\VBFile.ico" />
+    <None Include="Resources\VBClass.ico" />
+    <None Include="Resources\vb.ico" />
+    <None Include="Resources\unknown.ICO" />
+    <None Include="Resources\resx.ico" />
+    <None Include="Resources\Licence_XPTable.txt" />
+    <None Include="Resources\LogoText.png" />
+    <None Include="Resources\dots1.ico" />
+    <None Include="Resources\dots.ico" />
+    <None Include="Resources\PhoenixText.psd" />
+    <None Include="Resources\ScriptsIcon.ICO" />
+    <None Include="Resources\phoenix.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MulLib\MulLib.csproj">
+      <Project>{6A81FD87-776D-493D-8397-723626BC1C25}</Project>
+      <Name>MulLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PhoenixShared\PhoenixShared.csproj">
+      <Project>{F837C027-63F1-4BCF-8359-242E1933B450}</Project>
+      <Name>PhoenixShared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UOEncryption.NET\UOEncryption.NET.csproj">
+      <Project>{A9CA1AAA-3E01-456D-887F-BA75340D2C43}</Project>
+      <Name>UOEncryption.NET</Name>
+    </ProjectReference>
+    <Content Include="phoenix.ico" />
+    <None Include="Resources\BooFile.ico" />
+    <None Include="Resources\boo.ico" />
+    <Content Include="Resources\Icon_8.ico" />
+    <Content Include="Resources\Licence_GPL.txt" />
+    <Content Include="Resources\Licence_MagicLibrary.txt" />
+    <Content Include="Resources\phoenix_large.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
+</Project>

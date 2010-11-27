@@ -1,0 +1,107 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A9CA1AAA-3E01-456D-887F-BA75340D2C43}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyName>UOEncryption.NET</AssemblyName>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>UOEncryption</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <DebugType>None</DebugType>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>false</DebugSymbols>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <NoWarn>649</NoWarn>
+    <DebugType>
+    </DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <Optimize>true</Optimize>
+    <NoWarn>649</NoWarn>
+    <DebugType>
+    </DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BlowfishEncryption.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BlowfishTwofishEncryption.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Encryption.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Huffman.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HuffmanMD5Encryption.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IDecryptor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IEncryptor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LoginEncryption.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MD5.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NativeEncryption.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NoEncryption.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PasswordEncryption.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TwofishEncryption.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EncryptionVersion.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
+</Project>

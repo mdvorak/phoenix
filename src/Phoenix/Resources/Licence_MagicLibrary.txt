@@ -1,0 +1,12 @@
+There is no license fee or royalty fee to be paid at any time for using the Magic Library. You are however requested to acknowledge the use of the library and provide a link to our home page www.dotnetmagic.com from the About box of your application.
+
+You may include the source code, modified source code, signed assembly or modified built assembly within your own projects for either personal or commercial use but excluding the restrictions outlined below.
+
+The following restrictions apply to all parts of the library, including all source code, assemblies, samples and documentation...
+
+    * The above items cannot be sold as is, either individually or together.
+    * The above items cannot be modified and then sold as a library component, either individually or together.
+
+In other words, if you are using the library to enhance your project then you are fine. If you are trying to gain commercically from the library itself rather than using it to enhance your own work then you are prohibited from its use.
+
+If in any doubt they please contact us at license@dotnetmagic.com for a quick determination.
