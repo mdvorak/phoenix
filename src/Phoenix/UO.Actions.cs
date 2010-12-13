@@ -102,7 +102,7 @@ namespace Phoenix
 
             if (Core.SpellList.TryFind(spellname, out spellNum)) {
                 if (target.IsValid)
-                    UIManager.WaitForTarget(target, 0, 0, 0, 0);
+                    WaitTargetObject(target);
 
                 Core.SendToServer(PacketBuilder.CastSpell(spellNum), true);
             }
