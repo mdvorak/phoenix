@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <project xmlns="http://nant.sf.net/release/0.86-beta1/nant.xsd"
-         name="Phoenix 0.6" default="build" basedir=".">
+         name="Phoenix 0.7" default="build" basedir=".">
 
   <!-- System Properties -->
   <property name="debug" value="true" overwrite="false" />
@@ -31,10 +31,7 @@
       </properties>
     </nant>
 
-    <exec program="bzr" workingdir="${dir.solution}"
-          output="${dir.output}\changelog.txt">
-      <arg value="log" />
-    </exec>
+    <nant target="generate_changelog pack"/>
   </target>
 
   <target name="build" depends="clean,compile" description="Builds all projects to their respective folders">
@@ -201,5 +198,30 @@
     </exec>
 
     <copy file="${dir.tmp}\Phoenix.tlb" tofile="${dir.solution}\Phoenix.tlb" overwrite="true" />
+  </target>
+  
+  <target name="generate_changelog">
+    <script language="C#" failonerror="true">
+      <references>
+        <include name="System.dll" />
+      </references>
+      <code>
+      <![CDATA[
+        public static void ScriptMain(Project project) {
+            System.Diagnostics.ProcessStartInfo psi = new System.Diagnostics.ProcessStartInfo("git",  "log > out/bin/changelog.txt");
+            psi.UseShellExecute = true;
+            System.Diagnostics.Process.Start(psi).WaitForExit();
+        }
+      ]]>
+      </code>
+    </script>
+  </target>
+  
+  <target name="pack">
+    <zip zipfile="${dir.solution}/out/phoenix.zip">
+      <fileset basedir="${dir.output}" prefix="Phoenix">
+        <include name="**/*" />
+      </fileset>
+    </zip>
   </target>
 </project>
