@@ -6,6 +6,6 @@ Release
 x86
 *.user
 *.suo
-./help
-./out
+/help/
+/out/
 *.cache
