@@ -15,4 +15,4 @@ using System.Security.Permissions;
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
-[assembly: AssemblyVersion("0.7.3")]
+[assembly: AssemblyVersion("0.7.4")]
