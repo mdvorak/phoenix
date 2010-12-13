@@ -111,10 +111,8 @@ namespace Phoenix.WorldData
 
         public void WaitTarget()
         {
-            if (Exist)
-            {
-                UIManager.WaitForTarget(serial, 0, 0, 0, 0);
-            }
+            RealObject obj = World.FindRealObject(Serial);
+            UIManager.WaitForTarget(serial, obj.X, obj.Y, obj.Z, 0);
         }
 
         public override string ToString()

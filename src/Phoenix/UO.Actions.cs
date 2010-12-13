@@ -75,7 +75,7 @@ namespace Phoenix
         public static void Cast(byte spellnum, Serial target)
         {
             if (target.IsValid)
-                UIManager.WaitForTarget(target, 0, 0, 0, 0);
+                WaitTargetObject(target);
 
             Core.SendToServer(PacketBuilder.CastSpell(spellnum), true);
         }
@@ -128,7 +128,7 @@ namespace Phoenix
         public static void Cast(StandardSpell spell, Serial target)
         {
             if (target.IsValid)
-                UIManager.WaitForTarget(target, 0, 0, 0, 0);
+                WaitTargetObject(target);
 
             Core.SendToServer(PacketBuilder.CastSpell((byte)spell), true);
         }
@@ -179,7 +179,7 @@ namespace Phoenix
             UIManager.WaitForMenu(new MenuSelection("summon", summon));
 
             if (target.IsValid)
-                UIManager.WaitForTarget(target, 0, 0, 0, 0);
+                WaitTargetObject(target);
 
             UO.Cast("Summ. Creature");
         }
